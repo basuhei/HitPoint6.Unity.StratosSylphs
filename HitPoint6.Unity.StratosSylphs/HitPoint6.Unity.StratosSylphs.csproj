@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EC86145-3286-4A43-BC82-4A7A79359B8F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HitPoint6.Unity.StratosSylphs</RootNamespace>
+    <AssemblyName>HitPoint6.Unity.StratosSylphs</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\BGM.cs" />
+    <Compile Include="Audio\EnemySound.cs" />
+    <Compile Include="Audio\EnemySoundEmitter.cs" />
+    <Compile Include="Audio\PlayerSound.cs" />
+    <Compile Include="Audio\PlayerSoundPresenter.cs" />
+    <Compile Include="Audio\SoundEmitter.cs" />
+    <Compile Include="Constants\AnimationParams.cs" />
+    <Compile Include="Constants\ButtonName.cs" />
+    <Compile Include="Constants\GameObjectPath.cs" />
+    <Compile Include="Constants\Layers.cs" />
+    <Compile Include="Constants\Tags.cs" />
+    <Compile Include="Data\Enemy\AttackData\EnemyAttackDataBase.cs" />
+    <Compile Include="Data\Enemy\AttackData\EnemyPopData.cs" />
+    <Compile Include="Data\Enemy\AttackData\LaserData.cs" />
+    <Compile Include="Data\Enemy\AttackData\LaserDataBase.cs" />
+    <Compile Include="Data\Enemy\AttackData\LaserRotationData.cs" />
+    <Compile Include="Data\Enemy\AttackData\LaserTargetPlayerData.cs" />
+    <Compile Include="Data\Enemy\AttackData\nWayShotData.cs" />
+    <Compile Include="Data\Enemy\AttackData\nWayShotDataBase.cs" />
+    <Compile Include="Data\Enemy\AttackData\nWayShotRotationData.cs" />
+    <Compile Include="Data\Enemy\AttackData\nWayShotTargetPlayerData.cs" />
+    <Compile Include="Data\Enemy\EnemyActionBehaviourData.cs" />
+    <Compile Include="Data\Enemy\EnemyActionData.cs" />
+    <Compile Include="Data\Enemy\EnemyAttackData.cs" />
+    <Compile Include="Data\Enemy\EnemyBehaviourData.cs" />
+    <Compile Include="Data\Enemy\EnemyMoveData.cs" />
+    <Compile Include="Data\Enemy\MoveData\ApproachPlayerData.cs" />
+    <Compile Include="Data\Enemy\MoveData\AssaultToPlayerData.cs" />
+    <Compile Include="Data\Enemy\MoveData\EnemyMoveDataBase.cs" />
+    <Compile Include="Data\Enemy\MoveData\EnterData.cs" />
+    <Compile Include="Data\Enemy\MoveData\ExitData.cs" />
+    <Compile Include="Data\Enemy\MoveData\LinearMoveData.cs" />
+    <Compile Include="Data\Enemy\MoveData\MoveToPositionData.cs" />
+    <Compile Include="Data\Enemy\MoveData\MoveType.cs" />
+    <Compile Include="Data\Enemy\MoveData\RandomLinearData.cs" />
+    <Compile Include="Data\Enemy\MoveData\SwingData.cs" />
+    <Compile Include="Data\PlayerEventBehaviourData.cs" />
+    <Compile Include="Data\TalkEvent\TalkEvent.cs" />
+    <Compile Include="Data\TalkEvent\TalkEventSpriteData.cs" />
+    <Compile Include="Data\TalkEvent\TalkMessage.cs" />
+    <Compile Include="Data\Wepon\BombData.cs" />
+    <Compile Include="Data\Wepon\BulletData.cs" />
+    <Compile Include="Data\Wepon\GunData.cs" />
+    <Compile Include="Effect\CameraShake.cs" />
+    <Compile Include="Effect\DamageEffect.cs" />
+    <Compile Include="Effect\DeathEffect.cs" />
+    <Compile Include="Effect\FadeInOut.cs" />
+    <Compile Include="Effect\MagazineDrop.cs" />
+    <Compile Include="Effect\MuzzleFlush.cs" />
+    <Compile Include="GameUnitControllers\AnimatorSpeedController.cs" />
+    <Compile Include="GameUnitControllers\BossBehaviour.cs" />
+    <Compile Include="GameUnitControllers\BossEnemyGenerator.cs" />
+    <Compile Include="GameUnitControllers\BossHeadController.cs" />
+    <Compile Include="GameUnitControllers\EnemyAnimationBehaviour.cs" />
+    <Compile Include="GameUnitControllers\EnemyAttackProcesser.cs" />
+    <Compile Include="GameUnitControllers\EnemyBehaviour.cs" />
+    <Compile Include="GameUnitControllers\EnemyMoveProcesser.cs" />
+    <Compile Include="GameUnitControllers\EnemySoundPresenter.cs" />
+    <Compile Include="GameUnitControllers\EscapementFromAnimation.cs" />
+    <Compile Include="GameUnitControllers\KludgeScript.cs" />
+    <Compile Include="GameUnitControllers\PlayerAnimationController.cs" />
+    <Compile Include="GameUnitControllers\PlayerBombController.cs" />
+    <Compile Include="GameUnitControllers\PlayerColliderController.cs" />
+    <Compile Include="GameUnitControllers\PlayerController.cs" />
+    <Compile Include="GameUnitControllers\PlayerFiringController.cs" />
+    <Compile Include="GameUnitControllers\PlayerLifeController.cs" />
+    <Compile Include="GameUnitControllers\PlayerMoveController.cs" />
+    <Compile Include="GameUnitControllers\PlayerStateController.cs" />
+    <Compile Include="GameUnitControllers\ResidueEnemyDestroyFromAnimation.cs" />
+    <Compile Include="GameUnitControllers\TalkStartFromAnimationStateBehaviour.cs" />
+    <Compile Include="GameUnitControllers\TargetSetter.cs" />
+    <Compile Include="GameUnits\Boss.cs" />
+    <Compile Include="GameUnits\Enemy.cs" />
+    <Compile Include="GameUnits\MiddleBoss.cs" />
+    <Compile Include="GameUnits\Player.cs" />
+    <Compile Include="Hyphenation.cs" />
+    <Compile Include="IO\AudioVolumeSave.cs" />
+    <Compile Include="IO\VolumeLoadOnTitle.cs" />
+    <Compile Include="ISceneChangeEventObserver.cs" />
+    <Compile Include="MainCamera.cs" />
+    <Compile Include="Managers\AudioManager.cs" />
+    <Compile Include="Managers\BackGroundScroller.cs" />
+    <Compile Include="Managers\EnemySpawnerManager.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\LockOnSightManager.cs" />
+    <Compile Include="Managers\StageManager.cs" />
+    <Compile Include="Managers\TimeManager.cs" />
+    <Compile Include="Managers\TransitionManager.cs" />
+    <Compile Include="Managers\UIManager.cs" />
+    <Compile Include="MoveClamper.cs" />
+    <Compile Include="ObjectFinder.cs" />
+    <Compile Include="ParticleSpeedManage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SceneOverValueHolder.cs" />
+    <Compile Include="Scene\GameQuiteOnEcsapeKeyDown.cs" />
+    <Compile Include="Scene\SceneChanger.cs" />
+    <Compile Include="Scene\SceneType.cs" />
+    <Compile Include="TalkEvenTester.cs" />
+    <Compile Include="TalkEvent\AnimationCompleteObserver.cs" />
+    <Compile Include="TalkEvent\ChoiceDialog.cs" />
+    <Compile Include="TalkEvent\EventUIData.cs" />
+    <Compile Include="TalkEvent\TalkEventFromEnemySpawner.cs" />
+    <Compile Include="TalkEvent\TalkEventSystem.cs" />
+    <Compile Include="Tutorial\BombTutorial.cs" />
+    <Compile Include="Tutorial\Ending.cs" />
+    <Compile Include="Tutorial\EventEnemyPositionSet.cs" />
+    <Compile Include="Tutorial\ITutorial.cs" />
+    <Compile Include="Tutorial\MoveTutorial.cs" />
+    <Compile Include="Tutorial\Opening.cs" />
+    <Compile Include="Tutorial\ShotTutorial.cs" />
+    <Compile Include="Tutorial\TutorialControlGuideSprites.cs" />
+    <Compile Include="Tutorial\TutorialEvent.cs" />
+    <Compile Include="Tutorial\TutorialInputObserver.cs" />
+    <Compile Include="Tutorial\TutorialSystem.cs" />
+    <Compile Include="UI\FewBulletAlert.cs" />
+    <Compile Include="UI\GameClear.cs" />
+    <Compile Include="UI\GameExitButton.cs" />
+    <Compile Include="UI\GameOver.cs" />
+    <Compile Include="UI\LockOnSight.cs" />
+    <Compile Include="UI\MissileCount.cs" />
+    <Compile Include="UI\OptionScene\BuckToTitleButtonInOnlyOptionScene.cs" />
+    <Compile Include="UI\OptionScene\SaveButton.cs" />
+    <Compile Include="UI\OptionScene\VolumeChangeObserver.cs" />
+    <Compile Include="UI\OptionScene\VolumeSlider.cs" />
+    <Compile Include="UI\Pause.cs" />
+    <Compile Include="UI\PauseReleaseButton.cs" />
+    <Compile Include="UI\PlayerLife.cs" />
+    <Compile Include="UI\PlayerRemainingUnit.cs" />
+    <Compile Include="UI\PlaySEOnButtonDown.cs" />
+    <Compile Include="UI\RemainingBulletCount.cs" />
+    <Compile Include="UI\RemaningBulletGauge.cs" />
+    <Compile Include="UI\Result.cs" />
+    <Compile Include="UI\ResultCanvas.cs" />
+    <Compile Include="UI\ResultScene\CleaTime.cs" />
+    <Compile Include="UI\ResultScene\ResultScore.cs" />
+    <Compile Include="UI\ResultScene\ScoreRank.cs" />
+    <Compile Include="UI\SceneChangeButton.cs" />
+    <Compile Include="UI\Score.cs" />
+    <Compile Include="UI\TargetSightCore.cs" />
+    <Compile Include="UI\TargetSightUI.cs" />
+    <Compile Include="UI\TransitionEffectBase.cs" />
+    <Compile Include="Utils\CSV\TalkMessageReader.cs" />
+    <Compile Include="Utils\CSV\TypeConverter\DirectionConverter.cs" />
+    <Compile Include="Utils\CSV\TypeConverter\EmotionConverter.cs" />
+    <Compile Include="Utils\CSV\TypeConverter\StandSideConverter.cs" />
+    <Compile Include="Utils\InputUtils\InputUtil.cs" />
+    <Compile Include="Utils\Math\VolumeValueHelper.cs" />
+    <Compile Include="VisibleChecker.cs" />
+    <Compile Include="Weapon\DamageComponent.cs" />
+    <Compile Include="Weapon\Gun\Normal\Bullet.cs" />
+    <Compile Include="Weapon\Gun\Normal\Magazine.cs" />
+    <Compile Include="Weapon\Gun\Normal\PlayerGun.cs" />
+    <Compile Include="Weapon\Gun\nWay\NWayGun.cs" />
+    <Compile Include="Weapon\Gun\nWay\NWayMagazine.cs" />
+    <Compile Include="Weapon\IDamage.cs" />
+    <Compile Include="Weapon\IObservableShooter.cs" />
+    <Compile Include="Weapon\IReloadableContainer.cs" />
+    <Compile Include="Weapon\IReloadableShooter.cs" />
+    <Compile Include="Weapon\IShootable.cs" />
+    <Compile Include="Weapon\IShootableContainer.cs" />
+    <Compile Include="Weapon\IShooter.cs" />
+    <Compile Include="Weapon\IShootObserver.cs" />
+    <Compile Include="Weapon\Laser\Laser.cs" />
+    <Compile Include="Weapon\Laser\LaserManager.cs" />
+    <Compile Include="Weapon\Missile\Missile.cs" />
+    <Compile Include="Weapon\Missile\MissileStateBehaviour.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
